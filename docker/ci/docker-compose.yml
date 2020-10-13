@@ -1,0 +1,13 @@
+version: '3'
+ 
+services:
+  php:
+    build:
+      context: php
+    container_name: '${COMPOSE_PROJECT_NAME}_php'
+    hostname: '${COMPOSE_PROJECT_NAME}-php'
+    env_file:
+      - .env
+    volumes:
+      - ../../:/app:consistent
+    working_dir: /app
