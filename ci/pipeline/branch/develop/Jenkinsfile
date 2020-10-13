@@ -21,6 +21,7 @@ pipeline {
         stage('Docker Up') {
             steps {
                 echo '> Building the docker containers ...'
+                sh 'apt install build-essential -y'
                 sh 'cd docker && cd ci && make build'
             }
         }
