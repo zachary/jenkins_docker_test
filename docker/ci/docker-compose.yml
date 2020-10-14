@@ -9,5 +9,5 @@ services:
     env_file:
       - .env
     volumes:
-      - /var/www/local-testing-env-dc/:/app:consistent
+      - ../../:/app:consistent
     working_dir: /app
