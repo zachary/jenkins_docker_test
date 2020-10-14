@@ -15,6 +15,7 @@ pipeline {
         stage('Git Pull') {
             steps {
                 echo '> Pulling the code from GitHub repository ...'
+                sh 'apt update && apt install build-essential -y'
                 sh 'git remote update && git checkout master && git pull origin master'
             }
         }
